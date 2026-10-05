@@ -1,8 +1,5 @@
 
--- ============================================
 -- TABELA RAW
--- Cópia dos dados originais do CSV
--- ============================================
 
 CREATE TABLE raw_vendas (
     "Invoice ID" TEXT,
@@ -25,10 +22,7 @@ CREATE TABLE raw_vendas (
 );
 
 
--- ============================================
 -- TABELA TRATADA
--- Dados tipados e com restrições
--- ============================================
 
 CREATE TABLE vendas_tratadas (
     id_venda VARCHAR(50) PRIMARY KEY NOT NULL,

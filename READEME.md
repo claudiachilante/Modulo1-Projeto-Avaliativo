@@ -26,15 +26,13 @@ Módulo 1 - Projeto Avaliativo/
 │   └── processed/
 ├── resultados/
 ├── README.md
-├── requirements.txt
-└── .gitignore
 ```
 
 ## Como executar o projeto
 
 1. Instale o Python.
 2. Instale as bibliotecas necessárias:
-   pip install -r requirements.txt
+   Pandas e Matplotlib
 3. Configure o PostgreSQL.
 4. Execute os scripts SQL na pasta sql/.
 5. Execute os scripts Python na pasta src/.

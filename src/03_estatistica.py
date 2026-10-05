@@ -10,35 +10,35 @@ print(df.info())
 # Exploração dos dados: Estatísticas descritivas.
 print(df.describe())
 
-# Responde a primeira pergunta: Qual filial apresentou o maior faturamento?
+# Responde a 1ª pergunta: Qual filial apresentou o maior faturamento?
 faturamento_filial = df.groupby('filial')['valor_total'].sum()
 print(faturamento_filial)
 
-# Responde a segunda pergunta: Qual filial apresentou o maior quantidade de vendas?
+# Responde a 2ª pergunta: Qual filial apresentou o maior quantidade de vendas?
 quantidade_vendas_filial = df.groupby('filial')['id_venda'].count()
 print(quantidade_vendas_filial)
 
-# Responde a terceira pergunta: Qual linha de produto apresentou o maior faturamento?
+# Responde a 3ª pergunta: Qual linha de produto apresentou o maior faturamento?
 faturamento_linha_produto = df.groupby('linha_produto')['valor_total'].sum()
 print(faturamento_linha_produto)
 
-# Responde a quarta pergunta: Qual linha de produto recebeu a melhor avaliação média?
+# Responde a 4ª pergunta: Qual linha de produto recebeu a melhor avaliação média?
 avaliacao_media_linha_produto = df.groupby('linha_produto')['avaliacao'].mean()
 print(avaliacao_media_linha_produto)
 
-# Responde a quinta pergunta: Qual foi a forma de pagamento mais utilizada?
+# Responde a 5ª pergunta: Qual foi a forma de pagamento mais utilizada?
 forma_pagamento_mais_utilizada = df['forma_pagamento'].mode()[0]
 print(forma_pagamento_mais_utilizada)
 
-# Responde a sexta pergunta: Qual foi o valor médio das vendas?
+# Responde a 6ª pergunta: Qual foi o valor médio das vendas?
 valor_medio_vendas = df['valor_total'].mean()
 print(valor_medio_vendas)
 
-# Responde a sétima pergunta: Qual foi a maior venda registrada?
+# Responde a 7ª pergunta: Qual foi a maior venda registrada?
 maior_venda = df['valor_total'].max()
 print(maior_venda)
 
-# Responde a oitava pergunta: Em qual dia da semana ocorreu a maior quantidade de vendas?
+# Responde a 8ª pergunta: Em qual dia da semana ocorreu a maior quantidade de vendas?
 df['dia_semana'] = df['data_venda'].dt.day_name()
 quantidade_vendas_dia_semana = df.groupby('dia_semana')['id_venda'].count()
 dia_maior_vendas = quantidade_vendas_dia_semana.idxmax()

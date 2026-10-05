@@ -1,19 +1,14 @@
 # Importação do Pandas e primeira leitura dos dados ( estrutura / original).
-
-from tkinter import S
-
 import pandas as pd
 df = pd.read_csv("data/raw/SuperMarket Analysis.csv")
 print (df.head())
 df.info()
 
 # Conversão do Date de texto para data.
-
 df["Date"] = pd.to_datetime(df["Date"])
 df.info()
 
 # Conversão do Time de texto para hora.
-
 df["Time"] = pd.to_datetime(df["Time"], format='%I:%M:%S %p').dt.time
 df.info()
 
