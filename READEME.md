@@ -1,5 +1,3 @@
-:
-
 # Analise de Dados de Vendas
 
 ## Sobre o projeto.
@@ -17,7 +15,6 @@ O projeto tem objetivo de analisar  dados de vendas de uma rede de supermercados
 
 ## Estrutura do projeto
 
-```text
 Módulo 1 - Projeto Avaliativo/
 ├── sql/
 ├── src/
@@ -26,7 +23,7 @@ Módulo 1 - Projeto Avaliativo/
 │   └── processed/
 ├── resultados/
 ├── README.md
-```
+
 
 ## Como executar o projeto
 
@@ -61,3 +58,5 @@ O projeto responde às perguntas de negócio propostas :
 ## Fonte dos dados
 
 Dataset Supermarket Sales, disponibilizado no Kaggle.
+
+
